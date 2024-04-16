@@ -11,7 +11,7 @@ public interface IEventBus
 {
     Task SendCommand<T> (T command) where T : Command;
 
-    void Public<T> (T @event) where T : Event;
+    void Publish<T> (T @event) where T : Event;
 
     void Subcribe<T, TH>()
         where T : Event
